@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vidyarthi Cyber - Photocopy & Online Form Services</title>
+  <link rel="icon" href="Logo.jpeg" type="image/jpeg">
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --nav-color: #0056b3;
+      --header-color: #007bff;
+    }
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f4f4f4;
+      --nav-color: #222;
+      --header-color: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header-color);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    header img {
+      height: 60px;
+      width: auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--nav-color);
+      padding: 10px 20px;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      background-color: #0066cc;
+      padding: 8px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #004a99;
+    }
+
+    .toggle-mode {
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .map {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .review {
+      background: #e9f1ff;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #007bff;
+      border-radius: 4px;
+    }
+
+    .quote {
+      font-style: italic;
+      margin: 0;
+    }
+
+    .author {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      pointer-events: auto;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Logo.jpeg" alt="Vidyarthi Cyber Logo">
+  <div>
+    <h1 style="margin:0; font-size: 2.5em; font-family:'Times New Roman', Times, serif;">Vidyarthi Cyber</h1>
+    <p style="margin:0;">Photocopy & Online Form Services</p>
+  </div>
+</header>
+
+<div class="navbar">
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#location">Location</a>
+    <a href="#maps">Map</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="toggle-mode" onclick="toggleDarkMode()" id="modeIcon">🌙</div>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Vidyarthi Cyber offers quick and reliable photocopying, printing, form-filling, document scanning, lamination, and spiral binding services tailored for students and professionals.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Photocopy & Printing (Black & White, Colour)</li>
+    <li>Online Form Filling</li>
+    <li>Lamination & Spiral Binding</li>
+    <li>Document Scanning</li>
+  </ul>
+</section>
+
+<section id="location">
+  <h2>Our Address</h2>
+  <p>
+    70C/6, Chhota Baghara, Prayag, Prayagraj, Uttar Pradesh – 211002<br/>
+    📍 <a href="https://maps.app.goo.gl/p1aqDX7AimXndaJD7" target="_blank">View on Google Maps</a>
+  </p>
+</section>
+
+<section id="maps">
+  <h2>Map Location</h2>
+  <iframe class="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.938981725011!2d80.9268264!3d26.8753495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfdcf73fdb9cb%3A0x9e5f00a4fc5c3e36!2sVidyarthi%20Cyber!5e0!3m2!1sen!2sin!4v1719400000000"
+    allowfullscreen="" loading="lazy">
+  </iframe>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="review">
+    <p class="quote">“Very professional and fast service. Highly recommended for students!”</p>
+    <p class="author">– Anjali Singh, ★★★★★</p>
+  </div>
+  <div class="review">
+    <p class="quote">“Affordable photocopy and printing services. The owner is very helpful.”</p>
+    <p class="author">– Ramesh Verma, ★★★★☆</p>
+  </div>
+  <div class="review">
+    <p class="quote">“Best cyber cafe experience in the area. Clean and quick form filling!”</p>
+    <p class="author">– Pooja Mishra, ★★★★★</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> <a href="tel:+917525853937">+91 75258 53937</a></p>
+  <p><strong>Email:</strong> <a href="mailto:ptsyber@gmail.com">ptsyber@gmail.com</a></p>
+  <p><strong>Telegram:</strong> <a href="https://t.me/cybervidyarthi" target="_blank">@cybervidyarthi</a></p>
+  <p><strong>Working Hours:</strong><br>
+     Open All Days<br>
+     Morning: 8:00 AM – 12:00 PM<br>
+     Evening: 4:00 PM – 9:00 PM
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Vidyarthi Cyber. All rights reserved.</p>
+</footer>
+
+<!-- WhatsApp Floating Icon -->
+<a class="whatsapp-button" href="https://wa.me/917525853937" target="_blank">
+  <img src="WhatsApp.png" alt="WhatsApp" style="height: 50px; width: 50px; pointer-events: auto;">
+</a>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+  }
+
+  function toggleDarkMode() {
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+    body.classList.toggle('dark');
+    icon.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+  }
+</script>
+
+</body>
+</html>
