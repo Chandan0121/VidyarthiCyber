@@ -31,16 +31,19 @@
       background-color: var(--header-color);
       color: white;
       padding: 20px;
-      text-align: center;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 15px;
+      justify-content: center;
+      position: relative;
     }
 
     header img {
-      height: 90px;
-      width: auto;
+      height: 120px;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .navbar {
@@ -156,6 +159,11 @@
       .menu-icon {
         display: block;
       }
+
+      header img {
+        height: 80px;
+        left: 10px;
+      }
     }
   </style>
 </head>
@@ -163,7 +171,7 @@
 
 <header>
   <img src="Logo.png" alt="Vidyarthi Cyber Logo">
-  <div>
+  <div style="text-align:center;">
     <h1 style="margin:0; font-size: 2.5em; font-family:'Times New Roman', Times, serif;">Vidyarthi Cyber</h1>
     <p style="margin:0;">Photocopy & Online Form Services</p>
   </div>
@@ -217,15 +225,15 @@
   <h2>Customer Reviews</h2>
   <div class="review">
     <p class="quote">“Very professional and fast service. Highly recommended for students!”</p>
-    <p class="author">– Anjali Singh, ★★★★★</p>
+    <p class="author">– Suchita Singh, ★★★★★</p>
   </div>
   <div class="review">
     <p class="quote">“Affordable photocopy and printing services. The owner is very helpful.”</p>
-    <p class="author">– Ramesh Verma, ★★★★☆</p>
+    <p class="author">– Aditya Yadav, ★★★★☆</p>
   </div>
   <div class="review">
     <p class="quote">“Best cyber cafe experience in the area. Clean and quick form filling!”</p>
-    <p class="author">– Pooja Mishra, ★★★★★</p>
+    <p class="author">– Ratnakar Yadav, ★★★★★</p>
   </div>
 </section>
 
